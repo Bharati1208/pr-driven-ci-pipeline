@@ -1,0 +1,19 @@
+name: PR CI Validation
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validation-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run validation script
+        run: |
+          chmod +x scripts/validate.sh
+          ./scripts/validate.sh
