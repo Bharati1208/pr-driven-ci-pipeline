@@ -16,3 +16,5 @@ else
 fi
 
 echo "Validation completed successfully" >> $LOG_FILE
+exit 1
+exit 1
